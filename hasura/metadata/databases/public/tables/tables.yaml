@@ -2,3 +2,4 @@
 - "!include public_payment_status.yaml"
 - "!include public_slot.yaml"
 - "!include public_subscription_plan_frequency.yaml"
+- "!include public_subscription_plan_type.yaml"
