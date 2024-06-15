@@ -1,4 +1,5 @@
 - "!include public_diet_type.yaml"
+- "!include public_order_delivery_status.yaml"
 - "!include public_payment_status.yaml"
 - "!include public_slot.yaml"
 - "!include public_subscription_plan_frequency.yaml"
