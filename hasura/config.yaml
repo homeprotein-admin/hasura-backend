@@ -1,0 +1,8 @@
+version: 3
+endpoint: http://localhost:3008
+metadata_directory: metadata
+admin_secret: hasurasecret
+
+actions:
+  kind: synchronous
+  handler_webhook_baseurl: http://localhost:3000

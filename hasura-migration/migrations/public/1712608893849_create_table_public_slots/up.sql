@@ -1,1 +1,0 @@
-CREATE TABLE "public"."slots" ("id" serial NOT NULL, "from" Time NOT NULL, "to" timetz NOT NULL, "type" text NOT NULL, PRIMARY KEY ("id") , FOREIGN KEY ("type") REFERENCES "public"."subscription_plan_frequency"("value") ON UPDATE restrict ON DELETE restrict);

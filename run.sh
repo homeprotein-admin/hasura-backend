@@ -1,4 +1,4 @@
-docker-compose up -d
+docker compose up -d
 sleep 5
-cd hasura-migration
+cd hasura
 hasura console
