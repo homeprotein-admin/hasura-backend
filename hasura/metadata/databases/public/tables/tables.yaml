@@ -12,4 +12,5 @@
 - "!include public_subscription_plan_type.yaml"
 - "!include public_subscription_plans.yaml"
 - "!include public_subscriptions.yaml"
+- "!include public_trial_requests.yaml"
 - "!include public_users.yaml"
