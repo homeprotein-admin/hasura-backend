@@ -1,3 +1,19 @@
 table:
   name: chefs
   schema: public
+object_relationships:
+  - name: address
+    using:
+      foreign_key_constraint_on:
+        column: id
+        table:
+          name: addresses
+          schema: public
+array_relationships:
+  - name: subscriptions
+    using:
+      foreign_key_constraint_on:
+        column: assigned_chef_id
+        table:
+          name: subscriptions
+          schema: public

@@ -1,3 +1,22 @@
 table:
   name: payments
   schema: public
+object_relationships:
+  - name: payment_status
+    using:
+      foreign_key_constraint_on: status
+array_relationships:
+  - name: subscriptions
+    using:
+      foreign_key_constraint_on:
+        column: payment_id
+        table:
+          name: subscriptions
+          schema: public
+  - name: trial_requests
+    using:
+      foreign_key_constraint_on:
+        column: payment_id
+        table:
+          name: trial_requests
+          schema: public

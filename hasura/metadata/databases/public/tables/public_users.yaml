@@ -1,3 +1,22 @@
 table:
   name: users
   schema: public
+object_relationships:
+  - name: diet_type
+    using:
+      foreign_key_constraint_on: diet_preference
+array_relationships:
+  - name: addresses
+    using:
+      foreign_key_constraint_on:
+        column: user_id
+        table:
+          name: addresses
+          schema: public
+  - name: subscriptions
+    using:
+      foreign_key_constraint_on:
+        column: user_id
+        table:
+          name: subscriptions
+          schema: public

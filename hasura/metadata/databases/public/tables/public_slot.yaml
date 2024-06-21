@@ -1,3 +1,11 @@
 table:
   name: slot
   schema: public
+array_relationships:
+  - name: subscriptions
+    using:
+      foreign_key_constraint_on:
+        column: slot_id
+        table:
+          name: subscriptions
+          schema: public

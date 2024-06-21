@@ -2,3 +2,11 @@ table:
   name: subscription_plan_type
   schema: public
 is_enum: true
+array_relationships:
+  - name: subscription_plans
+    using:
+      foreign_key_constraint_on:
+        column: plan_type
+        table:
+          name: subscription_plans
+          schema: public

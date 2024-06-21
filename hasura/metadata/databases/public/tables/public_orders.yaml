@@ -1,3 +1,10 @@
 table:
   name: orders
   schema: public
+object_relationships:
+  - name: order_delivery_status
+    using:
+      foreign_key_constraint_on: status
+  - name: subscription
+    using:
+      foreign_key_constraint_on: subscription_id
