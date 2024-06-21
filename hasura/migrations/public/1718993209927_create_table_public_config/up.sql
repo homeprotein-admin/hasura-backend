@@ -1,0 +1,1 @@
+CREATE TABLE "public"."config" ("accepted_pincodes" text[] NOT NULL, "id" integer NOT NULL, PRIMARY KEY ("id") );COMMENT ON TABLE "public"."config" IS E'Table to store configs for frontend that needs frequent updates, and to avoid hardcoding and redeployments';

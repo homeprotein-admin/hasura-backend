@@ -1,6 +1,7 @@
 - "!include public_address_type.yaml"
 - "!include public_addresses.yaml"
 - "!include public_chefs.yaml"
+- "!include public_config.yaml"
 - "!include public_diet_type.yaml"
 - "!include public_meals.yaml"
 - "!include public_order_delivery_status.yaml"
