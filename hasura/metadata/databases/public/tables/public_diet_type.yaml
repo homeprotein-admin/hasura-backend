@@ -2,3 +2,18 @@ table:
   name: diet_type
   schema: public
 is_enum: true
+array_relationships:
+  - name: meals
+    using:
+      foreign_key_constraint_on:
+        column: meal_type
+        table:
+          name: meals
+          schema: public
+  - name: users
+    using:
+      foreign_key_constraint_on:
+        column: diet_preference
+        table:
+          name: users
+          schema: public
