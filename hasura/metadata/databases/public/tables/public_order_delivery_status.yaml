@@ -1,7 +1,6 @@
 table:
   name: order_delivery_status
   schema: public
-is_enum: true
 array_relationships:
   - name: orders
     using:
