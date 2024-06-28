@@ -28,3 +28,12 @@ Open http://localhost:9695/ for the Hasura UI
 ```
 sh ./sync.sh
 ```
+
+Start [Firebase Emulator](https://firebase.google.com/docs/emulator-suite)
+```bash
+firebase emulators:start
+```
+or
+```bash
+npx firebase emulators:start
+```
