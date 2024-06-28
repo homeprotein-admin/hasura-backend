@@ -5,3 +5,11 @@ object_relationships:
   - name: diet_type
     using:
       foreign_key_constraint_on: meal_type
+array_relationships:
+  - name: orders
+    using:
+      foreign_key_constraint_on:
+        column: meal_id
+        table:
+          name: orders
+          schema: public
