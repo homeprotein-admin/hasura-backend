@@ -28,7 +28,7 @@ const operation = `
 `;
 
 const variables = {
-    userId: "d48e9be1-9588-44aa-bf0f-780404bb257a",
+    userId: "f959996e-c895-4d2b-b852-f9f004198da9",
     assignedChefId: "e598f1af-2cc4-429d-9f71-b1da2cfe50cc",
     planId: 1,
     paymentId: "d198d3fc-e6dd-4cf3-88d0-839b19b1cc5e",

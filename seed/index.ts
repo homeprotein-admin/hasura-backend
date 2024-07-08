@@ -6,7 +6,7 @@ import {seedOrders} from "./orders";
 
 const seedToDB = async () => {
     const DEFAULT = {
-        user: "d48e9be1-9588-44aa-bf0f-780404bb257a",
+        user: "f959996e-c895-4d2b-b852-f9f004198da9",
         chef: "e598f1af-2cc4-429d-9f71-b1da2cfe50cc",
         planId: 1,
         slotId: 1
@@ -30,7 +30,8 @@ const seedToDB = async () => {
         const order = await seedOrders({
             mealId: Number(`${meal.data.insert_meals_one.id}`),
             slotId: DEFAULT.slotId,
-            subscriptionId: sub?.data?.insert_subscriptions_one?.id
+            subscriptionId: sub?.data?.insert_subscriptions_one?.id,
+            userId: DEFAULT.user
         })
 
         console.log(`Seeded order with the id ${order?.data?.insert_orders_one?.id}`)

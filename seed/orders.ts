@@ -8,12 +8,14 @@ const operation = `
       $mealId: Int!, 
       $slotId: Int!, 
       $subscriptionId: uuid! 
+      $userId: uuid! 
   ) {
     insert_orders_one(object: {
         delivery_date: $deliveryDate, 
         delivered_at: $deliveredAt, 
         meal_id: $mealId, 
         slot_id: $slotId, 
+        user_id: $userId, 
         subscription_id: $subscriptionId
     }) {
       id
@@ -26,7 +28,8 @@ const variables = {
     deliveredAt: faker.date.recent().toISOString(),
     mealId: faker.number.int(100),
     slotId: faker.number.int(10),
-    subscriptionId: faker.string.uuid()
+    subscriptionId: faker.string.uuid(),
+    userId: faker.string.uuid()
 };
 
 
