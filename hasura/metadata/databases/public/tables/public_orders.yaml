@@ -14,3 +14,34 @@ object_relationships:
   - name: subscription
     using:
       foreign_key_constraint_on: subscription_id
+  - name: user
+    using:
+      foreign_key_constraint_on: user_id
+select_permissions:
+  - role: user
+    permission:
+      columns:
+        - delivery_date
+        - meal_id
+        - slot_id
+        - status
+        - created_at
+        - delivered_at
+        - updated_at
+        - id
+        - subscription_id
+        - user_id
+      filter:
+        user_id:
+          _eq: X-Hasura-User-Id
+    comment: ""
+update_permissions:
+  - role: user
+    permission:
+      columns:
+        - status
+      filter:
+        user_id:
+          _eq: X-Hasura-User-Id
+      check: null
+    comment: ""

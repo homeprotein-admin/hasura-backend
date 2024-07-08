@@ -13,6 +13,13 @@ array_relationships:
         table:
           name: addresses
           schema: public
+  - name: orders
+    using:
+      foreign_key_constraint_on:
+        column: user_id
+        table:
+          name: orders
+          schema: public
   - name: subscriptions
     using:
       foreign_key_constraint_on:
@@ -20,3 +27,35 @@ array_relationships:
         table:
           name: subscriptions
           schema: public
+select_permissions:
+  - role: user
+    permission:
+      columns:
+        - diet_preference
+        - email
+        - first_name
+        - last_name
+        - mobile
+        - whatsapp
+        - created_at
+        - updated_at
+        - id
+      filter:
+        id:
+          _eq: X-Hasura-User-Id
+    comment: ""
+update_permissions:
+  - role: user
+    permission:
+      columns:
+        - diet_preference
+        - email
+        - first_name
+        - last_name
+        - mobile
+        - whatsapp
+      filter:
+        id:
+          _eq: X-Hasura-User-Id
+      check: null
+    comment: ""
