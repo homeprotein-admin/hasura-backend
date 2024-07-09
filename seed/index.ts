@@ -6,7 +6,7 @@ import {seedOrders} from "./orders";
 
 const seedToDB = async () => {
     const DEFAULT = {
-        user: "f959996e-c895-4d2b-b852-f9f004198da9",
+        user: "ecf95ffb-27b0-4564-9262-9c5a201b5453",
         chef: "e598f1af-2cc4-429d-9f71-b1da2cfe50cc",
         planId: 1,
         slotId: 1

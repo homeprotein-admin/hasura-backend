@@ -25,3 +25,23 @@ array_relationships:
         table:
           name: orders
           schema: public
+select_permissions:
+  - role: user
+    permission:
+      columns:
+        - end_date
+        - start_date
+        - amount_paid
+        - plan_id
+        - slot_id
+        - created_at
+        - updated_at
+        - assigned_chef_id
+        - id
+        - payment_id
+        - user_id
+      filter:
+        orders:
+          user_id:
+            _eq: X-Hasura-User-Id
+    comment: ""

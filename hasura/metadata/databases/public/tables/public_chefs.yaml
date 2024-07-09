@@ -17,3 +17,20 @@ array_relationships:
         table:
           name: subscriptions
           schema: public
+select_permissions:
+  - role: user
+    permission:
+      columns:
+        - only_veg_days
+        - first_name
+        - last_name
+        - mobile
+        - whatsapp
+        - created_at
+        - updated_at
+        - id
+      filter:
+        subscriptions:
+          user_id:
+            _eq: X-Hasura-User-Id
+    comment: ""

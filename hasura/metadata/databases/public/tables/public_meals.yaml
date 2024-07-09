@@ -13,3 +13,24 @@ array_relationships:
         table:
           name: orders
           schema: public
+select_permissions:
+  - role: user
+    permission:
+      columns:
+        - id
+        - carbs
+        - description
+        - fat
+        - fiber
+        - image
+        - kcal
+        - meal_type
+        - name
+        - protein
+        - created_at
+        - updated_at
+      filter:
+        orders:
+          user_id:
+            _eq: X-Hasura-User-Id
+    comment: ""
